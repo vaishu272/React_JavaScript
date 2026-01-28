@@ -1,32 +1,41 @@
 import { Bookmark } from "lucide-react";
 
-const Card = (props) => {
+const Card = ({
+  company,
+  post,
+  tag1,
+  tag2,
+  pay,
+  brandLogo,
+  datePosted,
+  location,
+}) => {
   return (
     <>
       <div className="card">
         <div>
           <div className="top">
-            <img src={props.brandLogo} alt="Logo" />
+            <img src={brandLogo} alt="Logo" />
             <button>
               Save <Bookmark size={12} />
             </button>
           </div>
           <div className="center">
             <h3>
-              {props.company}
-              <span>{props.datePosted}</span>
+              {company}
+              <span>{datePosted}</span>
             </h3>
-            <h2>{props.post}</h2>
+            <h2>{post}</h2>
             <div className="tag">
-              <h4>{props.tag1}</h4>
-              <h4>{props.tag2}</h4>
+              <h4>{tag1}</h4>
+              <h4>{tag2}</h4>
             </div>
           </div>
         </div>
         <div className="bottom">
           <div>
-            <h3>{props.pay}</h3>
-            <p>Mumbai, India</p>
+            <h3>{pay}</h3>
+            <p>{location}</p>
           </div>
           <button>Apply Now</button>
         </div>
