@@ -54,7 +54,7 @@ class Stage3 extends Component {
       return;
     }
 
-    // ✅ Context data update
+    // Context data update
     const { setFormData, setStage3Done, setCurrentStage } = this.props.context;
 
     setFormData((prev) => ({
